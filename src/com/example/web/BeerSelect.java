@@ -22,6 +22,7 @@ public class BeerSelect  extends HttpServlet{
         //     out.println("<br>try:" + it.next());
         // }
         request.setAttribute("styles",result);
+        // request.setAttribute("adminEmail",getServletConfig().getInitParameter("adminEmail"));
         RequestDispatcher view = request.getRequestDispatcher("result.jsp");
         view.forward(request,response);
     }

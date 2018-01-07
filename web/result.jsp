@@ -12,6 +12,7 @@
                 while(it.hasNext()){
                     out.print("<br>try:"+it.next());
                 }
+                out.print("<br>"+getServletContext().getInitParameter("adminEmail"));
             %>
         </p>
     </body>
