@@ -10,11 +10,11 @@ public class BeerSessionCounter implements HttpSessionListener{
 
     public void sessionCreated(HttpSessionEvent event){
         activeSessions++;
-        console.log(activeSessions);
+         System.out.println(activeSessions);
     }
 
     public void sessionDestroyed(HttpSessionEvent event){
         activeSessions--;
-        console.log(activeSessions);
+        System.out.println(activeSessions);
     }
 } 

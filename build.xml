@@ -2,17 +2,18 @@
 <project name="beerV1" default="create-class" basedir=".">
 
 	<property name="src" value="src"/>
-	<property name="lib" value="D:\Program Files\tomcat\apache-tomcat-7.0.82\lib\servlet-api.jar"/>
+	<!-- <property name="servlet-api" value="\D:\Program Files\tomcat\apache-tomcat-7.0.82\lib\c"/> -->
+	<property name="lib" value="lib/servlet-api.jar"/>  
 	<property name="dest" value="classes"/>
 	<!-- <property name="np_jar" value="build/lib/test.jar"/> -->
 
-	<!-- <target name="create-path">
+	<target name="create-path">
 		<mkdir dir="${dest}"/>
 		<mkdir dir="${lib}"/>
-	</target> -->
+	</target>
 
 	<target name="create-class">
-		<javac srcdir="${src}" destdir="${dest}"/>
+		<javac srcdir="${src}" destdir="${dest}" classpath="${lib}"/>
 	</target>
 
 	<target name="clean">
