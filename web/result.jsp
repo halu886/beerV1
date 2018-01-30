@@ -15,6 +15,16 @@
                 out.print("<br>"+getServletContext().getInitParameter("adminEmail"));
             %>
         </p>
+        person is
+        <%-- <% foo.Person p = (foo.Person)request.getAttribute("person"); %>
+            <%= p.getName()%>
+                --%>
+                <jsp:useBean id="person" class="foo.Person" scope="request">
+                    <jsp:setProperty name="person" property="name" value="Fred" />
+                </jsp:useBean>
+                <%-- <jsp:setProperty name="person" property="name" value="Fred" /> --%>
+                    <jsp:getProperty name="person" property="name" />
+
     </body>
 
     </html>
