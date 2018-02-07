@@ -19,7 +19,7 @@
         <%-- <% foo.Person p = (foo.Person)request.getAttribute("person"); %>
             <%= p.getName()%>
                 --%>
-                <jsp:useBean id="person" class="foo.Person" scope="request">
+                <jsp:useBean id="person" class="foo.Employee" type="foo.Person" scope="request">
                     <jsp:setProperty name="person" property="name" value="Fred" />
                 </jsp:useBean>
                 <%-- <jsp:setProperty name="person" property="name" value="Fred" /> --%>
